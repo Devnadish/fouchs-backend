@@ -1,0 +1,1265 @@
+16:54:40.255request: NextRequest { method: 'POST', headers: Headers {...}, destination: '', referrer: 'about:client', referrerPolicy: '', ... }
+request:
+
+NextRequest {
+
+  method: 'POST',
+
+  headers: Headers {
+
+    Symbol(headers list): HeadersList {
+
+      cookies: null,
+
+      Symbol(headers map): Map {
+
+        accept: { name: 'accept', value: 'application/json, text/plain, */*' },
+
+        accept-encoding: { name: 'accept-encoding', value: 'gzip, deflate, br, zstd' },
+
+        accept-language: { name: 'accept-language', value: 'en-US,en;q=0.9' },
+
+        connection: { name: 'connection', value: 'keep-alive' },
+
+        content-length: { name: 'content-length', value: '150' },
+
+        content-type: { name: 'content-type', value: 'application/json' },
+
+        cookie: {
+
+          name: 'cookie',
+
+          value: 
+
+            'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        },
+
+        host: { name: 'host', value: 'localhost:3000' },
+
+        origin: { name: 'origin', value: 'http://localhost:3000' },
+
+        referer: { name: 'referer', value: 'http://localhost:3000/' },
+
+        sec-ch-ua: {
+
+          name: 'sec-ch-ua',
+
+          value: 
+
+            '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+        },
+
+        sec-ch-ua-mobile: { name: 'sec-ch-ua-mobile', value: '?0' },
+
+        sec-ch-ua-platform: { name: 'sec-ch-ua-platform', value: '"Windows"' },
+
+        sec-fetch-dest: { name: 'sec-fetch-dest', value: 'empty' },
+
+        sec-fetch-mode: { name: 'sec-fetch-mode', value: 'cors' },
+
+        sec-fetch-site: { name: 'sec-fetch-site', value: 'same-origin' },
+
+        user-agent: {
+
+          name: 'user-agent',
+
+          value: 
+
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+        },
+
+        x-forwarded-for: { name: 'x-forwarded-for', value: '::1' },
+
+        x-forwarded-host: { name: 'x-forwarded-host', value: 'localhost:3000' },
+
+        x-forwarded-port: { name: 'x-forwarded-port', value: '3000' },
+
+        x-forwarded-proto: { name: 'x-forwarded-proto', value: 'http' }
+
+      },
+
+      Symbol(headers map sorted): Array(21) [
+
+        [ 'accept', 'application/json, text/plain, */*' ],
+
+        [ 'accept-encoding', 'gzip, deflate, br, zstd' ],
+
+        [ 'accept-language', 'en-US,en;q=0.9' ],
+
+        [ 'connection', 'keep-alive' ],
+
+        [ 'content-length', '150' ],
+
+        [ 'content-type', 'application/json' ],
+
+        [
+
+          'cookie', 
+
+            'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        ],
+
+        [ 'host', 'localhost:3000' ],
+
+        [ 'origin', 'http://localhost:3000' ],
+
+        [ 'referer', 'http://localhost:3000/' ],
+
+        [
+
+          'sec-ch-ua', '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+        ],
+
+        [ 'sec-ch-ua-mobile', '?0' ],
+
+        [ 'sec-ch-ua-platform', '"Windows"' ],
+
+        [ 'sec-fetch-dest', 'empty' ],
+
+        [ 'sec-fetch-mode', 'cors' ],
+
+        [ 'sec-fetch-site', 'same-origin' ],
+
+        [
+
+          'user-agent', 
+
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+        ],
+
+        [ 'x-forwarded-for', '::1' ],
+
+        [ 'x-forwarded-host', 'localhost:3000' ],
+
+        [ 'x-forwarded-port', '3000' ],
+
+        [ 'x-forwarded-proto', 'http' ]
+
+      ]
+
+    },
+
+    Symbol(guard): 'request',
+
+    Symbol(realm): {
+
+      settingsObject: {
+
+        baseUrl: undefined,
+
+        origin: undefined,
+
+        policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+      }
+
+    }
+
+  },
+
+  destination: '',
+
+  referrer: 'about:client',
+
+  referrerPolicy: '',
+
+  mode: 'cors',
+
+  credentials: 'same-origin',
+
+  cache: 'default',
+
+  redirect: 'follow',
+
+  integrity: '',
+
+  keepalive: false,
+
+  isReloadNavigation: false,
+
+  isHistoryNavigation: false,
+
+  signal: AbortSignal {
+
+    aborted: false,
+
+    onabort: null,
+
+    Symbol(kEvents): SafeMap {},
+
+    Symbol(events.maxEventTargetListeners): 10,
+
+    Symbol(events.maxEventTargetListenersWarned): false,
+
+    Symbol(kHandlers): SafeMap {},
+
+    Symbol(kAborted): false,
+
+    Symbol(kReason): undefined,
+
+    Symbol(kComposite): false,
+
+    Symbol(realm): {
+
+      settingsObject: {
+
+        baseUrl: undefined,
+
+        origin: undefined,
+
+        policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+      }
+
+    }
+
+  },
+
+  body: ReadableStream {
+
+    locked: false,
+
+    Symbol(kType): 'ReadableStream',
+
+    Symbol(kState): {
+
+      disturbed: false,
+
+      reader: undefined,
+
+      state: 'readable',
+
+      storedError: undefined,
+
+      stream: undefined,
+
+      transfer: {
+
+        writable: undefined,
+
+        port1: undefined,
+
+        port2: undefined,
+
+        promise: undefined
+
+      },
+
+      controller: ReadableStreamDefaultController {
+
+        desiredSize: 0,
+
+        Symbol(kType): 'ReadableStreamDefaultController',
+
+        Symbol(kState): {
+
+          closeRequested: false,
+
+          highWaterMark: 0,
+
+          pullAgain: false,
+
+          pulling: false,
+
+          queue: [],
+
+          queueTotalSize: 0,
+
+          started: false,
+
+          stream: ReadableStream {
+
+            locked: false,
+
+            Symbol(kType): 'ReadableStream',
+
+            Symbol(kState): {...},
+
+            Symbol(nodejs.webstream.isClosedPromise): {
+
+              promise: Promise {
+
+                Symbol(async_id_symbol): 10294,
+
+                Symbol(trigger_async_id_symbol): 10249,
+
+                Symbol(kResourceStore): undefined
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    },
+
+    Symbol(nodejs.webstream.isClosedPromise): {
+
+      promise: Promise {
+
+        Symbol(async_id_symbol): 10294,
+
+        Symbol(trigger_async_id_symbol): 10249,
+
+        Symbol(kResourceStore): undefined
+
+      }
+
+    }
+
+  },
+
+  bodyUsed: false,
+
+  duplex: 'half',
+
+  attribute: undefined,
+
+  Symbol(realm): {
+
+    settingsObject: {
+
+      baseUrl: undefined,
+
+      origin: undefined,
+
+      policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+    }
+
+  },
+
+  Symbol(state): {
+
+    method: 'POST',
+
+    localURLsOnly: false,
+
+    unsafeRequest: false,
+
+    body: {
+
+      stream: ReadableStream {
+
+        locked: false,
+
+        Symbol(kType): 'ReadableStream',
+
+        Symbol(kState): {
+
+          disturbed: false,
+
+          reader: undefined,
+
+          state: 'readable',
+
+          storedError: undefined,
+
+          stream: undefined,
+
+          transfer: {
+
+            writable: undefined,
+
+            port1: undefined,
+
+            port2: undefined,
+
+            promise: undefined
+
+          },
+
+          controller: ReadableStreamDefaultController {
+
+            desiredSize: 0,
+
+            Symbol(kType): 'ReadableStreamDefaultController',
+
+            Symbol(kState): {
+
+              closeRequested: false,
+
+              highWaterMark: 0,
+
+              pullAgain: false,
+
+              pulling: false,
+
+              queue: [],
+
+              queueTotalSize: 0,
+
+              started: false,
+
+              stream: ReadableStream {
+
+                locked: false,
+
+                Symbol(kType): 'ReadableStream',
+
+                Symbol(kState): {...},
+
+                Symbol(nodejs.webstream.isClosedPromise): {
+
+                  promise: Promise {
+
+                    Symbol(async_id_symbol): 10294,
+
+                    Symbol(trigger_async_id_symbol): 10249,
+
+                    Symbol(kResourceStore): undefined
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        },
+
+        Symbol(nodejs.webstream.isClosedPromise): {
+
+          promise: Promise {
+
+            Symbol(async_id_symbol): 10294,
+
+            Symbol(trigger_async_id_symbol): 10249,
+
+            Symbol(kResourceStore): undefined
+
+          }
+
+        }
+
+      },
+
+      source: null,
+
+      length: null
+
+    },
+
+    client: {
+
+      baseUrl: undefined,
+
+      origin: undefined,
+
+      policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+    },
+
+    reservedClient: null,
+
+    replacesClientId: '',
+
+    window: 'client',
+
+    keepalive: false,
+
+    serviceWorkers: 'all',
+
+    initiator: '',
+
+    destination: '',
+
+    priority: null,
+
+    origin: 'client',
+
+    policyContainer: 'client',
+
+    referrer: 'client',
+
+    referrerPolicy: '',
+
+    mode: 'cors',
+
+    useCORSPreflightFlag: true,
+
+    credentials: 'same-origin',
+
+    useCredentials: false,
+
+    cache: 'default',
+
+    redirect: 'follow',
+
+    integrity: '',
+
+    cryptoGraphicsNonceMetadata: '',
+
+    parserMetadata: '',
+
+    reloadNavigation: false,
+
+    historyNavigation: false,
+
+    userActivation: false,
+
+    taintedOrigin: false,
+
+    redirectCount: 0,
+
+    responseTainting: 'basic',
+
+    preventNoCacheCacheControlHeaderModification: false,
+
+    done: false,
+
+    timingAllowFailed: false,
+
+    headersList: HeadersList {
+
+      cookies: null,
+
+      Symbol(headers map): Map {
+
+        accept: { name: 'accept', value: 'application/json, text/plain, */*' },
+
+        accept-encoding: { name: 'accept-encoding', value: 'gzip, deflate, br, zstd' },
+
+        accept-language: { name: 'accept-language', value: 'en-US,en;q=0.9' },
+
+        connection: { name: 'connection', value: 'keep-alive' },
+
+        content-length: { name: 'content-length', value: '150' },
+
+        content-type: { name: 'content-type', value: 'application/json' },
+
+        cookie: {
+
+          name: 'cookie',
+
+          value: 
+
+            'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        },
+
+        host: { name: 'host', value: 'localhost:3000' },
+
+        origin: { name: 'origin', value: 'http://localhost:3000' },
+
+        referer: { name: 'referer', value: 'http://localhost:3000/' },
+
+        sec-ch-ua: {
+
+          name: 'sec-ch-ua',
+
+          value: 
+
+            '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+        },
+
+        sec-ch-ua-mobile: { name: 'sec-ch-ua-mobile', value: '?0' },
+
+        sec-ch-ua-platform: { name: 'sec-ch-ua-platform', value: '"Windows"' },
+
+        sec-fetch-dest: { name: 'sec-fetch-dest', value: 'empty' },
+
+        sec-fetch-mode: { name: 'sec-fetch-mode', value: 'cors' },
+
+        sec-fetch-site: { name: 'sec-fetch-site', value: 'same-origin' },
+
+        user-agent: {
+
+          name: 'user-agent',
+
+          value: 
+
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+        },
+
+        x-forwarded-for: { name: 'x-forwarded-for', value: '::1' },
+
+        x-forwarded-host: { name: 'x-forwarded-host', value: 'localhost:3000' },
+
+        x-forwarded-port: { name: 'x-forwarded-port', value: '3000' },
+
+        x-forwarded-proto: { name: 'x-forwarded-proto', value: 'http' }
+
+      },
+
+      Symbol(headers map sorted): Array(21) [
+
+        [ 'accept', 'application/json, text/plain, */*' ],
+
+        [ 'accept-encoding', 'gzip, deflate, br, zstd' ],
+
+        [ 'accept-language', 'en-US,en;q=0.9' ],
+
+        [ 'connection', 'keep-alive' ],
+
+        [ 'content-length', '150' ],
+
+        [ 'content-type', 'application/json' ],
+
+        [
+
+          'cookie', 
+
+            'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        ],
+
+        [ 'host', 'localhost:3000' ],
+
+        [ 'origin', 'http://localhost:3000' ],
+
+        [ 'referer', 'http://localhost:3000/' ],
+
+        [
+
+          'sec-ch-ua', '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+        ],
+
+        [ 'sec-ch-ua-mobile', '?0' ],
+
+        [ 'sec-ch-ua-platform', '"Windows"' ],
+
+        [ 'sec-fetch-dest', 'empty' ],
+
+        [ 'sec-fetch-mode', 'cors' ],
+
+        [ 'sec-fetch-site', 'same-origin' ],
+
+        [
+
+          'user-agent', 
+
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+        ],
+
+        [ 'x-forwarded-for', '::1' ],
+
+        [ 'x-forwarded-host', 'localhost:3000' ],
+
+        [ 'x-forwarded-port', '3000' ],
+
+        [ 'x-forwarded-proto', 'http' ]
+
+      ]
+
+    },
+
+    urlList: [
+
+      URL {
+
+        href: 'http://localhost:3000/api/user/register',
+
+        origin: 'http://localhost:3000',
+
+        protocol: 'http:',
+
+        username: '',
+
+        password: '',
+
+        host: 'localhost:3000',
+
+        hostname: 'localhost',
+
+        port: '3000',
+
+        pathname: '/api/user/register',
+
+        search: '',
+
+        searchParams: URLSearchParams { size: 0 },
+
+        hash: ''
+
+      }
+
+    ],
+
+    url: URL {
+
+      href: 'http://localhost:3000/api/user/register',
+
+      origin: 'http://localhost:3000',
+
+      protocol: 'http:',
+
+      username: '',
+
+      password: '',
+
+      host: 'localhost:3000',
+
+      hostname: 'localhost',
+
+      port: '3000',
+
+      pathname: '/api/user/register',
+
+      search: '',
+
+      searchParams: URLSearchParams { size: 0 },
+
+      hash: ''
+
+    }
+
+  },
+
+  Symbol(signal): AbortSignal {
+
+    aborted: false,
+
+    onabort: null,
+
+    Symbol(kEvents): SafeMap {},
+
+    Symbol(events.maxEventTargetListeners): 10,
+
+    Symbol(events.maxEventTargetListenersWarned): false,
+
+    Symbol(kHandlers): SafeMap {},
+
+    Symbol(kAborted): false,
+
+    Symbol(kReason): undefined,
+
+    Symbol(kComposite): false,
+
+    Symbol(realm): {
+
+      settingsObject: {
+
+        baseUrl: undefined,
+
+        origin: undefined,
+
+        policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+      }
+
+    }
+
+  },
+
+  Symbol(abortController): AbortController {
+
+    signal: AbortSignal {
+
+      aborted: false,
+
+      onabort: null,
+
+      Symbol(kEvents): SafeMap {},
+
+      Symbol(events.maxEventTargetListeners): 10,
+
+      Symbol(events.maxEventTargetListenersWarned): false,
+
+      Symbol(kHandlers): SafeMap {},
+
+      Symbol(kAborted): false,
+
+      Symbol(kReason): undefined,
+
+      Symbol(kComposite): false,
+
+      Symbol(realm): {
+
+        settingsObject: {
+
+          baseUrl: undefined,
+
+          origin: undefined,
+
+          policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+        }
+
+      }
+
+    }
+
+  },
+
+  Symbol(headers): Headers {
+
+    Symbol(headers list): HeadersList {
+
+      cookies: null,
+
+      Symbol(headers map): Map {
+
+        accept: { name: 'accept', value: 'application/json, text/plain, */*' },
+
+        accept-encoding: { name: 'accept-encoding', value: 'gzip, deflate, br, zstd' },
+
+        accept-language: { name: 'accept-language', value: 'en-US,en;q=0.9' },
+
+        connection: { name: 'connection', value: 'keep-alive' },
+
+        content-length: { name: 'content-length', value: '150' },
+
+        content-type: { name: 'content-type', value: 'application/json' },
+
+        cookie: {
+
+          name: 'cookie',
+
+          value: 
+
+            'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        },
+
+        host: { name: 'host', value: 'localhost:3000' },
+
+        origin: { name: 'origin', value: 'http://localhost:3000' },
+
+        referer: { name: 'referer', value: 'http://localhost:3000/' },
+
+        sec-ch-ua: {
+
+          name: 'sec-ch-ua',
+
+          value: 
+
+            '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+        },
+
+        sec-ch-ua-mobile: { name: 'sec-ch-ua-mobile', value: '?0' },
+
+        sec-ch-ua-platform: { name: 'sec-ch-ua-platform', value: '"Windows"' },
+
+        sec-fetch-dest: { name: 'sec-fetch-dest', value: 'empty' },
+
+        sec-fetch-mode: { name: 'sec-fetch-mode', value: 'cors' },
+
+        sec-fetch-site: { name: 'sec-fetch-site', value: 'same-origin' },
+
+        user-agent: {
+
+          name: 'user-agent',
+
+          value: 
+
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+        },
+
+        x-forwarded-for: { name: 'x-forwarded-for', value: '::1' },
+
+        x-forwarded-host: { name: 'x-forwarded-host', value: 'localhost:3000' },
+
+        x-forwarded-port: { name: 'x-forwarded-port', value: '3000' },
+
+        x-forwarded-proto: { name: 'x-forwarded-proto', value: 'http' }
+
+      },
+
+      Symbol(headers map sorted): Array(21) [
+
+        [ 'accept', 'application/json, text/plain, */*' ],
+
+        [ 'accept-encoding', 'gzip, deflate, br, zstd' ],
+
+        [ 'accept-language', 'en-US,en;q=0.9' ],
+
+        [ 'connection', 'keep-alive' ],
+
+        [ 'content-length', '150' ],
+
+        [ 'content-type', 'application/json' ],
+
+        [
+
+          'cookie', 
+
+            'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        ],
+
+        [ 'host', 'localhost:3000' ],
+
+        [ 'origin', 'http://localhost:3000' ],
+
+        [ 'referer', 'http://localhost:3000/' ],
+
+        [
+
+          'sec-ch-ua', '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+        ],
+
+        [ 'sec-ch-ua-mobile', '?0' ],
+
+        [ 'sec-ch-ua-platform', '"Windows"' ],
+
+        [ 'sec-fetch-dest', 'empty' ],
+
+        [ 'sec-fetch-mode', 'cors' ],
+
+        [ 'sec-fetch-site', 'same-origin' ],
+
+        [
+
+          'user-agent', 
+
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+        ],
+
+        [ 'x-forwarded-for', '::1' ],
+
+        [ 'x-forwarded-host', 'localhost:3000' ],
+
+        [ 'x-forwarded-port', '3000' ],
+
+        [ 'x-forwarded-proto', 'http' ]
+
+      ]
+
+    },
+
+    Symbol(guard): 'request',
+
+    Symbol(realm): {
+
+      settingsObject: {
+
+        baseUrl: undefined,
+
+        origin: undefined,
+
+        policyContainer: { referrerPolicy: 'strict-origin-when-cross-origin' }
+
+      }
+
+    }
+
+  },
+
+  Symbol(internal request): {
+
+    cookies: RequestCookies {
+
+      _parsed: Map {
+
+        next-auth.session-token: {
+
+          name: 'next-auth.session-token',
+
+          value: 
+
+            'eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+        }
+
+      },
+
+      _headers: Headers {
+
+        Symbol(headers list): HeadersList {
+
+          cookies: null,
+
+          Symbol(headers map): Map {
+
+            accept: {
+
+              name: 'accept',
+
+              value: 'application/json, text/plain, */*'
+
+            },
+
+            accept-encoding: { name: 'accept-encoding', value: 'gzip, deflate, br, zstd' },
+
+            accept-language: { name: 'accept-language', value: 'en-US,en;q=0.9' },
+
+            connection: { name: 'connection', value: 'keep-alive' },
+
+            content-length: { name: 'content-length', value: '150' },
+
+            content-type: { name: 'content-type', value: 'application/json' },
+
+            cookie: {
+
+              name: 'cookie',
+
+              value: 
+
+                'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+            },
+
+            host: { name: 'host', value: 'localhost:3000' },
+
+            origin: { name: 'origin', value: 'http://localhost:3000' },
+
+            referer: { name: 'referer', value: 'http://localhost:3000/' },
+
+            sec-ch-ua: {
+
+              name: 'sec-ch-ua',
+
+              value: 
+
+                '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+            },
+
+            sec-ch-ua-mobile: { name: 'sec-ch-ua-mobile', value: '?0' },
+
+            sec-ch-ua-platform: { name: 'sec-ch-ua-platform', value: '"Windows"' },
+
+            sec-fetch-dest: { name: 'sec-fetch-dest', value: 'empty' },
+
+            sec-fetch-mode: { name: 'sec-fetch-mode', value: 'cors' },
+
+            sec-fetch-site: { name: 'sec-fetch-site', value: 'same-origin' },
+
+            user-agent: {
+
+              name: 'user-agent',
+
+              value: 
+
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+            },
+
+            x-forwarded-for: { name: 'x-forwarded-for', value: '::1' },
+
+            x-forwarded-host: { name: 'x-forwarded-host', value: 'localhost:3000' },
+
+            x-forwarded-port: { name: 'x-forwarded-port', value: '3000' },
+
+            x-forwarded-proto: { name: 'x-forwarded-proto', value: 'http' }
+
+          },
+
+          Symbol(headers map sorted): Array(21) [
+
+            [ 'accept', 'application/json, text/plain, */*' ],
+
+            [ 'accept-encoding', 'gzip, deflate, br, zstd' ],
+
+            [ 'accept-language', 'en-US,en;q=0.9' ],
+
+            [ 'connection', 'keep-alive' ],
+
+            [ 'content-length', '150' ],
+
+            [ 'content-type', 'application/json' ],
+
+            [
+
+              'cookie', 
+
+                'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g'
+
+            ],
+
+            [ 'host', 'localhost:3000' ],
+
+            [ 'origin', 'http://localhost:3000' ],
+
+            [ 'referer', 'http://localhost:3000/' ],
+
+            [
+
+              'sec-ch-ua', '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"'
+
+            ],
+
+            [ 'sec-ch-ua-mobile', '?0' ],
+
+            [ 'sec-ch-ua-platform', '"Windows"' ],
+
+            [ 'sec-fetch-dest', 'empty' ],
+
+            [ 'sec-fetch-mode', 'cors' ],
+
+            [ 'sec-fetch-site', 'same-origin' ],
+
+            [
+
+              'user-agent', 
+
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+
+            ],
+
+            [ 'x-forwarded-for', '::1' ],
+
+            [ 'x-forwarded-host', 'localhost:3000' ],
+
+            [ 'x-forwarded-port', '3000' ],
+
+            [ 'x-forwarded-proto', 'http' ]
+
+          ]
+
+        },
+
+        Symbol(guard): 'request',
+
+        Symbol(realm): {
+
+          settingsObject: {
+
+            baseUrl: undefined,
+
+            origin: undefined,
+
+            policyContainer: {
+
+              referrerPolicy: 'strict-origin-when-cross-origin'
+
+            }
+
+          }
+
+        }
+
+      }
+
+    },
+
+    geo: {},
+
+    ip: undefined,
+
+    nextUrl: NextURL {
+
+      Symbol(NextURLInternal): {
+
+        url: URL {
+
+          href: 'http://localhost:3000/api/user/register',
+
+          origin: 'http://localhost:3000',
+
+          protocol: 'http:',
+
+          username: '',
+
+          password: '',
+
+          host: 'localhost:3000',
+
+          hostname: 'localhost',
+
+          port: '3000',
+
+          pathname: '/api/user/register',
+
+          search: '',
+
+          searchParams: URLSearchParams { size: 0 },
+
+          hash: ''
+
+        },
+
+        options: {
+
+          headers: {
+
+            accept: 'application/json, text/plain, */*',
+
+            'accept-encoding': 'gzip, deflate, br, zstd',
+
+            'accept-language': 'en-US,en;q=0.9',
+
+            connection: 'keep-alive',
+
+            'content-length': '150',
+
+            'content-type': 'application/json',
+
+            cookie: 
+
+              'next-auth.session-token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..f_Rn1NT5S8IvJyfN.EotYBCdj9oNpzRNQM90Ld029bgZ7aX4Lli9sNya4JN3L10LcQ5licCtCsJdEefCZkR5gmVvDo-41v8FVA-77Og3nNpLYNqTMUFOfzsOPURYOQwVi5CwsUN2KmO7ICNdM9Ui1U-EnHbl6QIZ2LBXrED3lMKcXhuXLOX0E3TIo1RtNPHYL49X59ugXCXvh1Phjd_goFzPJB68p4iXnJhYjOO2RYjxIe4RzeQ1mCwk5XKyrjCEywY2HdKzNkylJ3fNagp7VzVoN8fLI65Cd0Cnrds_vOwbUh0w1I2YK4_QnEoxM6tw1PGOwQy1a9x8BBj9lau2ah8dQIITCJXAbzuZ2yaYQMRpa679tp_4zbF6elbpH6T-Gwzj29pmTdlkA_hXEmSHt5FqiWwbqyzQ-sPWEi5mmhIYV35sC0lw9aAEl4nAJLrUsj26ZTE_p1G5sfoKVaU5GGAOQKT4kMWS9QWTfrxvXMPvgMlFr.ZpR6VfAL9xhxAoQfomr36g',
+
+            host: 'localhost:3000',
+
+            origin: 'http://localhost:3000',
+
+            referer: 'http://localhost:3000/',
+
+            'sec-ch-ua': 
+
+              '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+
+            'sec-ch-ua-mobile': '?0',
+
+            'sec-ch-ua-platform': '"Windows"',
+
+            'sec-fetch-dest': 'empty',
+
+            'sec-fetch-mode': 'cors',
+
+            'sec-fetch-site': 'same-origin',
+
+            'user-agent': 
+
+              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+
+            'x-forwarded-for': '::1',
+
+            'x-forwarded-host': 'localhost:3000',
+
+            'x-forwarded-port': '3000',
+
+            'x-forwarded-proto': 'http'
+
+          },
+
+          nextConfig: undefined
+
+        },
+
+        basePath: '',
+
+        domainLocale: undefined,
+
+        defaultLocale: undefined,
+
+        buildId: undefined,
+
+        locale: undefined,
+
+        trailingSlash: false
+
+      }
+
+    },
+
+    url: 'http://localhost:3000/api/user/register'
+
+  }
+
+}
+
+16:54:40.314'Name: khalid, Email: khalid@khalid, Mobile: undefined, Password: undefined'
+16:54:40.398'User added: {"id":"66952a206fb421de973e27e4","name":"khalid","email":"khalidnadish@gmail.com","avatar":"","password":"","isVerif...'

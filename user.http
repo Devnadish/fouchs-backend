@@ -1,0 +1,5 @@
+POST http://localhost:3000/api/user/register/check_is_exisit
+Content-Type: application/json
+
+{"email":"devnadish@gmail.com",
+"phone":"05456422600004"}
