@@ -7,8 +7,8 @@ const CheckUserIsExisit = () => {
   const checkIsExisit = async () => {
     const url = process.env.NEXT_PUBLIC_API_ENDPOINT + CHECK_USER_IS_EXISIT;
     const userData = {
-      email: "khalid@gmail.com 1972",
-      mobile: "96-638439-567794-1",
+      email: "",
+      mobile: "0545642264",
     };
 
     const checkIsUserExisit = await axios
@@ -24,7 +24,7 @@ const CheckUserIsExisit = () => {
   };
   return (
     <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
       onClick={() => checkIsExisit()}
     >
       Check User Exist

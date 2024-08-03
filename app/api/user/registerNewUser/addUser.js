@@ -6,7 +6,7 @@ export const addUser = async (
   mobile,
   password,
   smsToken,
-  city,
+  city = "jeddah",
   car,
   carModel,
   carYear,
