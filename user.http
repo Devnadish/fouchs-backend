@@ -1,5 +1,24 @@
-POST http://localhost:3000/api/user/register/check_is_exisit
+
+
+###
+# Get user by mobile
+POST http://localhost:3000/api/user/get_by_mobile
 Content-Type: application/json
 
-{"email":"devnadish@gmail.com",
-"phone":"05456422600004"}
+{"mobile":"0512345678"}
+
+###
+# update profile
+PATCH  http://localhost:3000/api/user/update/updateprofile
+Content-Type: application/json
+
+{"oldMobile":"05999999999","name":"khalid ali nadish","password":"45678","mobile":"05999999999","avatar":"test","email":"Devnadish@gmail.com "
+}
+
+###
+# update userCar
+PATCH  http://localhost:3000/api/user/update/updatecar
+Content-Type: application/json
+
+{"mobile":"0512345678","car":"test", "carModel":"test", "carYear":"1999"
+}
