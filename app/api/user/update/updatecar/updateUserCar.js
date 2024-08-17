@@ -1,6 +1,14 @@
 import db from "../../../../../lib/prisma";
 
-export const UserCar = async (mobile, car, carModel, carYear) => {
+export const UserCar = async (
+  mobile,
+  carId,
+  car,
+  carModelId,
+  carModel,
+  carYear
+) => {
+  console.log(mobile, car, carModel, carYear, carId, carModelId);
   const user = await db.user.findFirst({
     where: { mobile: mobile },
   });
@@ -14,7 +22,15 @@ export const UserCar = async (mobile, car, carModel, carYear) => {
     const data = await db.user.update({
       where: { id: user.id },
       data: {
-        car: { update: { car, carModel, carYear } },
+        car: {
+          update: {
+            car: car,
+            carModel: carModel,
+            carYear: carYear,
+            carId: carId,
+            modelId: carModelId,
+          },
+        },
       },
     });
     console.log("updaed :", data);

@@ -7,9 +7,17 @@ export const PATCH = async (request) => {
   try {
     const data = await request.json();
     console.log(data);
-    const { mobile, car, carModel, carYear } = data;
+    const { mobile, car, carModel, carYear, carId, carModelId } = data;
     console.log(data);
-    const userCar = await UserCar(mobile, car, carModel, carYear);
+    const yearToString = carYear.toString();
+    const userCar = await UserCar(
+      mobile,
+      carId,
+      car,
+      carModelId,
+      carModel,
+      yearToString
+    );
     return new Response("CarUpdated", {
       status: 200,
       headers: { "Content-Type": "application/json" },
