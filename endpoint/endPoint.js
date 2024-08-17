@@ -4,3 +4,6 @@ export const USER_LOGIN = "/api/user/login";
 export const GET_USER_BY_MOBILE = "/api/user/getByMobile";
 export const UPDATE_USER_PROFILE = "/api/user/update/updateprofile";
 export const UPDATE_USER_CAR = "/api/user/update/updatecar";
+export const GET_ALL_CARS = "/api/cars/getallcars";
+export const GET_CARS_BY_ID =
+  "/api/cars/getCarById?carId=66bb31a72b7dbdff6a173032";

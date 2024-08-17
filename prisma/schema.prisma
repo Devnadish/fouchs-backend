@@ -43,7 +43,9 @@ model User {
 
 model Car {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  carId     String   @default("")
   car       String   @default("")
+  modelId   String   @default("")
   carModel  String   @default("")
   carYear   String   @default("")
   user      User     @relation(fields: [userId], references: [id])
@@ -66,7 +68,8 @@ model CarDb {
   id        String       @id @default(auto()) @map("_id") @db.ObjectId
   carAr     String       @default("")
   carEn     String       @default("")
-  logo      String       @default("") 
+  logo      String       @default("")
+  public_id String       @default("")
   CarModel  CarModelDb[]
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
@@ -74,10 +77,11 @@ model CarDb {
 
 model CarModelDb {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  masterCar  String   @default("")
   carModelAr String   @default("")
   carModelEn String   @default("")
   CarDb      CarDb    @relation(fields: [carId], references: [id])
-  carId      String   @unique @db.ObjectId
+  carId      String   @db.ObjectId
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }

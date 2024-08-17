@@ -1,9 +1,11 @@
 import CheckLogin from "@/createData/CheckLogin";
 import CheckUserIsExisit from "@/createData/CheckUserIsExisit";
 import CreateeBranches from "@/createData/CreateeBranches";
+import CreateeCarsData from "@/createData/CreateeCarsData";
 import CreateeReview from "@/createData/CreateeReview";
 import CreateeServices from "@/createData/CreateeServices";
 import CreateUsers from "@/createData/CreateUsers";
+import UploadCarImage from "@/createData/UploadCarImage";
 
 import Image from "next/image";
 export const dynamic = "force-dynamic";
@@ -24,6 +26,8 @@ export default function Home() {
           <CreateeServices />
           <CreateeBranches />
           <CreateeReview />
+          <CreateeCarsData />
+          <UploadCarImage />
           {/* <Booking /> */}
         </div>
 
