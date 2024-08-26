@@ -1,11 +1,9 @@
 import db from "../../../../lib/prisma.js";
 
-export const checkIsUserExisit = async (email, mobile) => {
+export const checkIsUserExisit = async (mobile) => {
   try {
     const data = await db.user.findMany({
-      where: {
-        OR: [{ email }, { mobile }],
-      },
+      where: { mobile: mobile },
     });
     if (data.length > 0) {
       return true;

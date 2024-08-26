@@ -19,8 +19,6 @@ const CreateeServices = () => {
       .catch((error) => {
         console.error({ error });
       });
-
-    console.log(addUserToDB);
   };
   return (
     <button

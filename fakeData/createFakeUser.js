@@ -2,8 +2,6 @@
 import { faker } from "@faker-js/faker";
 
 export const createFakeUser = async () => {
-  const min = 1990;
-  const max = 2024;
   const userData = {
     name: faker.person.fullName(),
     email: faker.internet.exampleEmail(),

@@ -4,7 +4,8 @@ export const dynamic = "force-dynamic"; // defaults to auto
 export const POST = async (request) => {
   try {
     const data = await request.json();
-    const user = await checkIsUserExisit(data.email, data.mobile);
+    const user = await checkIsUserExisit(data.mobile);
+    // const user = await checkIsUserExisit(data.email, data.mobile);
     // if user exist return true else return false
     const result = user ? "exist" : "notExist";
     return new Response(result, { status: 201 });

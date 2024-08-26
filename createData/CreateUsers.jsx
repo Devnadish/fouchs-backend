@@ -18,7 +18,6 @@ function CreateUsers() {
     const addUserToDB = await Promise.all(
       users.map(async (user) => {
         const response = await axios.post(url, user);
-        console.log(response.status, response.statusText);
         return response.data;
       })
     );

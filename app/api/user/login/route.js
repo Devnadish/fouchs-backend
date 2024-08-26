@@ -4,13 +4,11 @@ export const dynamic = "force-dynamic"; // defaults to auto
 export const POST = async (request) => {
   try {
     const data = await request.json();
-    console.log(data);
 
     // Call addUser function with the extracted data
 
     const checkIsUserLogin = await userLogin(data);
 
-    console.log(checkIsUserLogin);
     //>>>>>>>>>>>>> 1-check if user exist or not
 
     //>>>>>>>>>>>>> 2-if user exist return true else return false and

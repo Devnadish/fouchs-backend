@@ -2,6 +2,7 @@ import CheckLogin from "@/createData/CheckLogin";
 import CheckUserIsExisit from "@/createData/CheckUserIsExisit";
 import CreateeBranches from "@/createData/CreateeBranches";
 import CreateeCarsData from "@/createData/CreateeCarsData";
+import CreateeOffers from "@/createData/CreateeOffers";
 import CreateeReview from "@/createData/CreateeReview";
 import CreateeServices from "@/createData/CreateeServices";
 import CreateUsers from "@/createData/CreateUsers";
@@ -23,8 +24,9 @@ export default function Home() {
       <div className="w-full flex items-center justify-between">
         <div className="w-full flex items-start flex-col gap-2  flex-wrap">
           <CreateUsers />
-          <CreateeServices />
           <CreateeBranches />
+          <CreateeOffers />
+          <CreateeServices />
           <CreateeReview />
           <CreateeCarsData />
           <UploadCarImage />

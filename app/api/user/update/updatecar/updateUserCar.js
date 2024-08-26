@@ -8,7 +8,6 @@ export const UserCar = async (
   carModel,
   carYear
 ) => {
-  console.log(mobile, car, carModel, carYear, carId, carModelId);
   const user = await db.user.findFirst({
     where: { mobile: mobile },
   });
@@ -33,7 +32,6 @@ export const UserCar = async (
         },
       },
     });
-    console.log("updaed :", data);
     return data;
   } catch (error) {
     console.log(error);

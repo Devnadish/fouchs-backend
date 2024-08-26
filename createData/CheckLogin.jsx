@@ -19,8 +19,6 @@ const CheckLogin = () => {
       .catch((error) => {
         console.error({ error });
       });
-
-    console.log(checkIsLogin);
   };
   return (
     <button

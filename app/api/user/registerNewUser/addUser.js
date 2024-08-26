@@ -26,7 +26,7 @@ export const addUser = async (
             city: city,
           },
         },
-        Car: {
+        car: {
           create: {
             car: car,
             carModel: carModel,

@@ -41,7 +41,6 @@ export const updateUserProfile = async (
         profile: { update: { avatar, city } },
       },
     });
-    console.log("updaed :", data);
     return data;
   } catch (error) {
     console.log(error);

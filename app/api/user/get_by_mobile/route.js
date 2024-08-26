@@ -6,7 +6,6 @@ export const POST = async (request) => {
   try {
     const data = await request.json();
     const { mobile } = data;
-    console.log(data);
     const getUser = await getUserByMobile(mobile);
     return new Response(JSON.stringify(getUser), {
       status: 200,

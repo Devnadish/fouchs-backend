@@ -19,8 +19,6 @@ const CheckUserIsExisit = () => {
       .catch((error) => {
         console.error({ error });
       });
-
-    console.log(checkIsUserExisit.data);
   };
   return (
     <button

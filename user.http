@@ -32,3 +32,29 @@ Content-Type: application/json
 ###
 # get getcarByid
 GET  http://localhost:3000/api/cars/getCarById?carId=66bb31a72b7dbdff6a173032
+
+
+###
+# get banches in each city as Title and cound How many branch in each city
+GET  http://localhost:3000/api/branches/groupcity?language=ar
+Content-Type: application/json
+
+
+###
+# get banches by City with page and limit
+GET http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json
+
+
+###
+# get banches detail
+GET http://localhost:3000/api/branches/branchdetail?brid=66c5f913bd94faf55f65dec4
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json
+
+###
+# get offers
+GET http://localhost:3000/api/offer/alloffer?language=ar&page=1&limit=5
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json

@@ -85,3 +85,47 @@ model CarModelDb {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
+
+model Branch {
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  nameAr       String        @default("")
+  nameEn       String        @default("")
+  cityId       String        @default("")
+  cityAr       String        @default("")
+  cityEn       String        @default("")
+  distId       String        @default("")
+  distAr       String        @default("")
+  distEn       String        @default("")
+  lat          String        @default("")
+  long         String        @default("")
+  mobile       String        @default("")
+  addreesAr    String        @default("")
+  addreesEn    String        @default("")
+  googleRate   String        @default("")
+  usersRate    String        @default("")
+  workIngHours String        @default("")
+  Note         String        @default("")
+  masterImage  String        @default("")
+  image        BranchImage[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model BranchImage {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  image     String   @default("")
+  branch    Branch   @relation(fields: [branchId], references: [id])
+  branchId  String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Offer {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  image     String   @default("")
+  detailAr    String   @default("")
+  detailEn    String   @default("")
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
