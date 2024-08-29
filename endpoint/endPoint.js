@@ -16,3 +16,10 @@ export const BRANCHES_DETAIL =
 
 export const OFFERS_DETAIL =
   "http://localhost:3000/api/offer/alloffer?language=ar&page=1&limit=5";
+export const ALL_SERVICES =
+  "http://localhost:3000/api/service/getallservice?language=ar";
+
+export const SERVICES_INFO =
+  "http://localhost:3000/api/service/serviceinfo?language=ar&serviceId=66cf440408ae52c4aded293a";
+export const SERVICES_GIFT = "";
+export const SERVICES_RATE = "";

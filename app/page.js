@@ -5,6 +5,7 @@ import CreateeCarsData from "@/createData/CreateeCarsData";
 import CreateeOffers from "@/createData/CreateeOffers";
 import CreateeReview from "@/createData/CreateeReview";
 import CreateeServices from "@/createData/CreateeServices";
+import CreateServise from "@/createData/CreateServise";
 import CreateUsers from "@/createData/CreateUsers";
 import UploadCarImage from "@/createData/UploadCarImage";
 
@@ -30,7 +31,7 @@ export default function Home() {
           <CreateeReview />
           <CreateeCarsData />
           <UploadCarImage />
-          {/* <Booking /> */}
+          <CreateServise />
         </div>
 
         <div className="w-full flex items-end  justify-start  flex-col gap-2  flex-wrap ">

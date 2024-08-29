@@ -58,3 +58,28 @@ Content-Type: application/json
 GET http://localhost:3000/api/offer/alloffer?language=ar&page=1&limit=5
 # GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
 Content-Type: application/json
+
+###
+# get service
+GET http://localhost:3000/api/service/getallservice?language=ar
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json
+
+###
+# get serviceInfo
+GET http://localhost:3000/api/service/serviceinfo?language=ar&serviceId=66cf440408ae52c4aded293a
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json
+
+###
+# get serviceGift
+GET http://localhost:3000/api/service/servicegift?language=ar&serviceId=66cf440408ae52c4aded293a
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json
+
+
+###
+# get serviceRate
+GET http://localhost:3000/api/service/servicerate?serviceId=66cf440408ae52c4aded293a
+# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+Content-Type: application/json

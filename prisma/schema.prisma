@@ -123,9 +123,57 @@ model BranchImage {
 model Offer {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   image     String   @default("")
-  detailAr    String   @default("")
-  detailEn    String   @default("")
+  detailAr  String   @default("")
+  detailEn  String   @default("")
   isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  titleAr       String @default("")
+  titleEn       String @default("")
+  descriptionAr String @default("")
+  descriptionEn String @default("")
+  image         String @default("")
+  rate          Int @default(0)
+  info        ServiceInfo[]
+  freeGift    ServiceFreeGift[]
+  serviceRate ServiceRate[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ServiceRate {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @default("")
+  userName  String   @default("")
+  rate      Int      @default(0)
+  comment   String   @default("")
+  service   Service  @relation(fields: [serviceId], references: [id])
+  serviceId String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ServiceInfo {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  infoAr    String   @default("")
+  infoEn    String   @default("")
+  service   Service  @relation(fields: [serviceId], references: [id])
+  serviceId String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ServiceFreeGift {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  image     String   @default("")
+  giftAr    String   @default("")
+  giftEn    String   @default("")
+  service   Service  @relation(fields: [serviceId], references: [id])
+  serviceId String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
