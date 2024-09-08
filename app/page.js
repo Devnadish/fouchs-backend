@@ -1,5 +1,6 @@
 import CheckLogin from "@/createData/CheckLogin";
 import CheckUserIsExisit from "@/createData/CheckUserIsExisit";
+import CreateCity from "@/createData/CreateCity";
 import CreateeBranches from "@/createData/CreateeBranches";
 import CreateeCarsData from "@/createData/CreateeCarsData";
 import CreateeOffers from "@/createData/CreateeOffers";
@@ -24,6 +25,7 @@ export default function Home() {
       </div>
       <div className="w-full flex items-center justify-between">
         <div className="w-full flex items-start flex-col gap-2  flex-wrap">
+          <CreateCity />
           <CreateUsers />
           <CreateeBranches />
           <CreateeOffers />
@@ -50,7 +52,8 @@ export default function Home() {
           priority
         />
       </div>
-      <p>Version: 1.0.1</p>
+      <p>Version: 1.0.50</p>
+      <p>8/9/2024</p>
     </main>
   );
 }

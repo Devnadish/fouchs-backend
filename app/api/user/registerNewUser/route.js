@@ -7,15 +7,11 @@ export const POST = async (request) => {
 
     // Call addUser function with the extracted data
     const user = await addUser(
-      data.name,
-      data.email,
+      data.userName,
       data.mobile,
       data.password,
       data.smsToken,
-      data.city,
-      data.car,
-      data.carModel,
-      data.carYear,
+      data.isVerified,
       data.avatar
     );
 

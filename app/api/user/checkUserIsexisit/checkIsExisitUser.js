@@ -1,16 +1,18 @@
 import db from "../../../../lib/prisma.js";
 
-export const checkIsUserExisit = async (mobile) => {
+export const checkIsUserExist = async (mobile) => {
   try {
-    const data = await db.user.findMany({
-      where: { mobile: mobile },
+    const user = await db.user.findFirst({
+      where: { mobile },
     });
-    if (data.length > 0) {
-      return true;
+
+    if (user) {
+      return { statusCode: 300, msg: "User Already Exists" };
     } else {
-      return false;
+      return { statusCode: 301, msg: "User Does Not Exist" };
     }
   } catch (error) {
-    console.log(error);
+    console.error("Error checking user existence:", error);
+    return { statusCode: 500, msg: "Internal Server Error" }; // Consistent error response
   }
 };

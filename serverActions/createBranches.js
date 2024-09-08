@@ -8,14 +8,16 @@ import db from "../lib/prisma";
 export const createBranches = async () => {
   await db.BranchImage.deleteMany();
   await db.Branch.deleteMany();
+  const city = await db.cityDb.findMany();
 
   for (let i = 0; i < 50; i++) {
-    const brData = await createFakBranche();
+    const brData = await createFakBranche(city);
     try {
       const Updatedata = await db.Branch.create({
         data: {
           nameAr: brData.nameAr,
           nameEn: brData.nameEn,
+          cityId: brData.cityId,
           cityAr: brData.cityAr,
           cityEn: brData.cityEn,
           distAr: brData.distAr,

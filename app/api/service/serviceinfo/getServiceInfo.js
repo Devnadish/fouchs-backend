@@ -1,3 +1,4 @@
+import { getSrviceInformationData } from "@/serverActions/getServiceInformation.js";
 import db from "../../../../lib/prisma.js";
 
 export async function getSrviceInfoData(language, serviceId) {
@@ -26,10 +27,11 @@ export async function getSrviceInfoData(language, serviceId) {
           descriptionEn: true,
           image: true,
         };
-  const serviceInformation = await db.service.findFirst({
-    where: { id: serviceId },
-    select: selectInformationdata,
-  });
+
+  const serviceInformation = await getSrviceInformationData(
+    language,
+    serviceId
+  );
 
   const serviceInfo = await db.ServiceInfo.findMany({
     where: { serviceId: serviceId },

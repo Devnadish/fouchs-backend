@@ -8,6 +8,7 @@ export const getAllCars = async (userData) => {
         carAr: true,
         carEn: true,
         logo: true,
+        CarModel: true,
         public_id: true,
       },
     });

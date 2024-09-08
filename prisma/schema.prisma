@@ -13,22 +13,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Profile {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  avatar    String   @default("")
-  city      String   @default("")
-  dist      String   @default("")
-  user      User     @relation(fields: [userId], references: [id])
-  userId    String   @unique @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
 model User {
   id                String       @id @default(auto()) @map("_id") @db.ObjectId
   name              String       @default("")
   email             String       @default("") // update to unique
-  mobile            String       @default("")
+  mobile            String       @unique
   password          String       @default("")
   isVerified        Boolean      @default(false)
   smsToken          String       @default("")
@@ -39,6 +28,18 @@ model User {
   setting           userSetting?
   createdAt         DateTime     @default(now())
   updatedAt         DateTime     @updatedAt
+}
+
+model Profile {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  avatar    String   @default("")
+  cityId    String   @default("")
+  city      String   @default("")
+  dist      String   @default("")
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String   @unique @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Car {
@@ -131,18 +132,18 @@ model Offer {
 }
 
 model Service {
-  id            String @id @default(auto()) @map("_id") @db.ObjectId
-  titleAr       String @default("")
-  titleEn       String @default("")
-  descriptionAr String @default("")
-  descriptionEn String @default("")
-  image         String @default("")
-  rate          Int @default(0)
-  info        ServiceInfo[]
-  freeGift    ServiceFreeGift[]
-  serviceRate ServiceRate[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id            String            @id @default(auto()) @map("_id") @db.ObjectId
+  titleAr       String            @default("")
+  titleEn       String            @default("")
+  descriptionAr String            @default("")
+  descriptionEn String            @default("")
+  image         String            @default("")
+  rate          Int               @default(0)
+  info          ServiceInfo[]
+  freeGift      ServiceFreeGift[]
+  serviceRate   ServiceRate[]
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
 }
 
 model ServiceRate {
@@ -174,6 +175,14 @@ model ServiceFreeGift {
   giftEn    String   @default("")
   service   Service  @relation(fields: [serviceId], references: [id])
   serviceId String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CityDb {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  cityAr    String   @default("")
+  cityEn    String   @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

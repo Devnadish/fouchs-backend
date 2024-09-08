@@ -7,9 +7,16 @@ export const GET = async (request) => {
     const params = Object.fromEntries(
       new URLSearchParams(url.search).entries()
     );
-    const { serviceId } = params;
+    const { serviceId, page, limit, rate, language } = params;
+    const intRate = parseInt(rate);
 
-    const servicesRate = await getSrviceRateData(serviceId);
+    const servicesRate = await getSrviceRateData(
+      serviceId,
+      page,
+      limit,
+      intRate,
+      language
+    );
 
     return new Response(JSON.stringify(servicesRate), {
       status: 200,

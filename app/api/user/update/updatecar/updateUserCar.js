@@ -12,28 +12,32 @@ export const UserCar = async (
     where: { mobile: mobile },
   });
 
-  // check if user exist or not
   if (!user) {
     return "notExist";
   }
-
   try {
-    const data = await db.user.update({
-      where: { id: user.id },
-      data: {
-        car: {
-          update: {
-            car: car,
-            carModel: carModel,
-            carYear: carYear,
-            carId: carId,
-            modelId: carModelId,
-          },
+    const data = await db.car.upsert({
+      where: { userId: user.id },
+      update: {
+        car,
+        carModel,
+        carYear,
+        carId,
+        modelId: carModelId,
+      },
+      create: {
+        user: {
+          connect: { id: user.id }, // Connect to the existing user
         },
+        car,
+        carModel,
+        carYear,
+        carId,
+        modelId: carModelId,
       },
     });
     return data;
   } catch (error) {
-    console.log(error);
+    console.error("Error during upsert operation:", error);
   }
 };

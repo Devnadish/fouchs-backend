@@ -15,7 +15,7 @@ export const PATCH = async (request) => {
       carModel,
       yearToString
     );
-    return new Response("CarUpdated", {
+    return new Response(JSON.stringify(userCar), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });

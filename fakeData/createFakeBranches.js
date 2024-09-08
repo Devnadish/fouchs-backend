@@ -2,12 +2,17 @@
 import { faker } from "@faker-js/faker";
 import { fakerAR } from "@faker-js/faker";
 
-export const createFakBranche = async () => {
+export const createFakBranche = async (city) => {
+  console.log(city);
+  const randomIndex = Math.floor(Math.random() * city.length);
+  const cityBR = city[randomIndex];
+  console.log({ cityBR });
   const branchData = {
     nameAr: fakerAR.lorem.words({ min: 3, max: 5 }),
     nameEn: faker.word.words({ count: { min: 3, max: 5 } }),
-    cityAr: fakerAR.location.city(),
-    cityEn: faker.location.city(),
+    cityId: cityBR.id,
+    cityAr: cityBR.cityAr,
+    cityEn: cityBR.cityEn,
     distAr: fakerAR.location.city(),
     distEn: faker.location.city(),
     lat: faker.location.latitude(),

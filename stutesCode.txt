@@ -1,0 +1,6 @@
+200 --> Ok
+300 --> Data Exist
+301 --> Data Not Exist
+401 --> Incorrect password
+404 --> data Not Exist
+500 --> server Error 

@@ -6,7 +6,7 @@ import {
 } from "@/serverActions/createBranches";
 const CreateeBranches = () => {
   const addBrnches = async () => {
-    // await createBranches();
+    await createBranches();
     await createBranchImages();
   };
   return (

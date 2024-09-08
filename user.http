@@ -80,6 +80,5 @@ Content-Type: application/json
 
 ###
 # get serviceRate
-GET http://localhost:3000/api/service/servicerate?serviceId=66cf440408ae52c4aded293a
-# GET  http://localhost:3000/api/branches/getbranchbycity?language=ar&page=1&limit=5
+GET http://localhost:3000/api/service/servicerate?serviceId=66cf440408ae52c4aded293a&page=1&limit=10&rate=1&language=ar
 Content-Type: application/json

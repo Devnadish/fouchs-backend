@@ -1,3 +1,4 @@
+import { getSrviceInformationData } from "@/serverActions/getServiceInformation.js";
 import db from "../../../../lib/prisma.js";
 
 export async function getSrviceGiftData(language, serviceId) {
@@ -19,7 +20,9 @@ export async function getSrviceGiftData(language, serviceId) {
     select: selectdata,
     orderBy: { updatedAt: "desc" },
   });
-
-  console.log(serviceInfo); //totalPage;
-  return serviceInfo;
+  const serviceInformation = await getSrviceInformationData(
+    language,
+    serviceId
+  );
+  return { serviceInfo: serviceInfo, serviceInformation: serviceInformation };
 }

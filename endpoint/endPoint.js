@@ -21,5 +21,15 @@ export const ALL_SERVICES =
 
 export const SERVICES_INFO =
   "http://localhost:3000/api/service/serviceinfo?language=ar&serviceId=66cf440408ae52c4aded293a";
-export const SERVICES_GIFT = "";
-export const SERVICES_RATE = "";
+export const SERVICES_GIFT =
+  "http://localhost:3000/api/service/servicegift?language=ar&serviceId=66cf440408ae52c4aded293a";
+export const SERVICES_RATE =
+  "http://localhost:3000/api/service/servicerate?serviceId=66cf440408ae52c4aded293a&page=1&limit=10&rate=1&language=ar";
+
+export const UPDATE_PRPFILE_IMAGE =
+  "http://localhost:3000/api/user/updateUserProfileImage";
+
+export const GET_ALL_CITY =
+  "http://localhost:3000/api/city/getallcity?language=ar";
+
+export const UPDATE_CITY = "http://localhost:3000/api/city/updatecity";
