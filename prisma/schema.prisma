@@ -36,6 +36,8 @@ model Profile {
   cityId    String   @default("")
   city      String   @default("")
   dist      String   @default("")
+  language  String   @default("ar")
+  theme     String   @default("light")
   user      User     @relation(fields: [userId], references: [id])
   userId    String   @unique @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
   createdAt DateTime @default(now())
