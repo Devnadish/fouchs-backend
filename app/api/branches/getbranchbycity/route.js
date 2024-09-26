@@ -1,9 +1,6 @@
 // import { groupCityiesAndCountBranches } from "./getCities";
 
-import {
-  getBranchByCities,
-  groupCitiesAndCountBranches,
-} from "./getBranchByCities";
+import { getBranchByCities } from "./getBranchByCities";
 
 export const dynamic = "force-dynamic"; // defaults to auto
 
@@ -13,11 +10,15 @@ export const GET = async (request) => {
     const params = Object.fromEntries(
       new URLSearchParams(url.search).entries()
     );
-    const { language, page, limit, city } = params;
+    const { language, page, limit, city, userId } = params;
 
-    const branches = await getBranchByCities(language, page, limit, city);
-    // console.log({ language, page, limit, city });
-    // console.log({ branches });
+    const branches = await getBranchByCities(
+      language,
+      page,
+      limit,
+      city,
+      userId
+    );
 
     return new Response(JSON.stringify(branches), {
       status: 200,

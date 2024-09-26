@@ -23,6 +23,5 @@ export async function getAllService(language) {
     orderBy: { updatedAt: "desc" },
   });
 
-  console.log(allService); //totalPage;
   return allService;
 }

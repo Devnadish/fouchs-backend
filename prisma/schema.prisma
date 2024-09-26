@@ -90,28 +90,38 @@ model CarModelDb {
 }
 
 model Branch {
-  id           String        @id @default(auto()) @map("_id") @db.ObjectId
-  nameAr       String        @default("")
-  nameEn       String        @default("")
-  cityId       String        @default("")
-  cityAr       String        @default("")
-  cityEn       String        @default("")
-  distId       String        @default("")
-  distAr       String        @default("")
-  distEn       String        @default("")
-  lat          String        @default("")
-  long         String        @default("")
-  mobile       String        @default("")
-  addreesAr    String        @default("")
-  addreesEn    String        @default("")
-  googleRate   String        @default("")
-  usersRate    String        @default("")
-  workIngHours String        @default("")
-  Note         String        @default("")
-  masterImage  String        @default("")
-  image        BranchImage[]
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  id               String             @id @default(auto()) @map("_id") @db.ObjectId
+  nameAr           String             @default("")
+  nameEn           String             @default("")
+  cityId           String             @default("")
+  cityAr           String             @default("")
+  cityEn           String             @default("")
+  distId           String             @default("")
+  distAr           String             @default("")
+  distEn           String             @default("")
+  lat              String             @default("")
+  long             String             @default("")
+  mobile           String             @default("")
+  addreesAr        String             @default("")
+  addreesEn        String             @default("")
+  googleRate       String             @default("")
+  usersRate        String             @default("")
+  workIngHours     String             @default("")
+  Note             String             @default("")
+  masterImage      String             @default("")
+  image            BranchImage[]
+  branchLikeByUser branchLikeByUser[]
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+}
+
+model branchLikeByUser {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @default("")
+  branch    Branch   @relation(fields: [branchId], references: [id])
+  branchId  String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model BranchImage {

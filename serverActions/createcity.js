@@ -13,7 +13,6 @@ export const createCityes = async () => {
           cityEn: cities[i].cityEn,
         },
       });
-      console.log(Updatedata);
     } catch (error) {
       console.log(error);
     }

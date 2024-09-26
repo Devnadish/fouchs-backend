@@ -33,3 +33,9 @@ export const GET_ALL_CITY =
   "http://localhost:3000/api/city/getallcity?language=ar";
 
 export const UPDATE_CITY = "http://localhost:3000/api/city/updatecity";
+
+export const FAVORITE_BRANCHES =
+  "http://localhost:3000/api/branches/favorate/favorite";
+
+export const BRANCHES_COUNTER =
+  "http://localhost:3000/api/branches/getCounters?userId=66d86c239600c40123e46573&cityId=66d9bfa2967b1b92ca56f5fa";

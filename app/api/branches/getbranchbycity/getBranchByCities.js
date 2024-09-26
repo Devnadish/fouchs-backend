@@ -1,38 +1,59 @@
 import db from "../../../../lib/prisma.js";
+import { getFavoriteBranches } from "./getFavorate.js";
+import { getSelectData } from "./selectData.js";
 
-export async function getBranchByCities(language, page = 1, limit = 5, city) {
+export async function getBranchByCities(
+  language,
+  page = 1,
+  limit = 5,
+  city,
+  userId
+) {
   let SearchField = {};
-  if (city) {
-    SearchField = language === "ar" ? { cityAr: city } : { cityEn: city };
+
+  if (city === "favorite") {
+    const allFavoriteBranchesDB = await getFavoriteBranches(
+      userId,
+      page,
+      limit,
+      language
+    );
+    return allFavoriteBranchesDB;
   }
 
-  const selectdata =
-    language === "ar"
-      ? {
-          id: true,
-          nameAr: true,
-          usersRate: true,
-          masterImage: true,
-        }
-      : {
-          id: true,
-          nameEn: true,
-          usersRate: true,
-          masterImage: true,
-        };
+  if (city === "allBranches") {
+    return await getAllBranches(userId, page, limit);
+  }
 
-  const allBranches = await db.branch.findMany({
+  if (city) {
+    SearchField = { cityId: city };
+  }
+
+  const selectdata = getSelectData(language, userId);
+
+  const allBranchesDB = await db.branch.findMany({
     where: SearchField,
     select: selectdata,
     skip: (parseInt(page) - 1) * parseInt(limit),
     take: parseInt(limit),
     orderBy: { updatedAt: "desc" },
   });
+
   const totalBranches = await db.branch.count({
     where: SearchField,
   });
+
   const totalPage = Math.ceil(totalBranches / parseInt(limit));
-  // console.log("totalPage :", totalPage, SearchField); //totalPage;
-  console.log(allBranches); //totalPage;
-  return { allBranches, totalPage };
+
+  const allBranches = allBranchesDB.map((branch) => ({
+    ...branch,
+    isFavorited: branch.branchLikeByUser.length > 0,
+  }));
+
+  return {
+    allBranches,
+    totalPage,
+  };
 }
+
+const getAllBranches = async (userId, page, limit) => {};

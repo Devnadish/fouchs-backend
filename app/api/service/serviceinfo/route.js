@@ -11,7 +11,6 @@ export const GET = async (request) => {
 
     const servicesInfo = await getSrviceInfoData(language, serviceId);
 
-    console.log(JSON.stringify(servicesInfo, null, 2));
     return new Response(JSON.stringify(servicesInfo), {
       status: 200,
       headers: { "Content-Type": "application/json" },

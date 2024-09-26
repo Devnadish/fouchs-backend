@@ -13,7 +13,6 @@ export const GET = async (request) => {
     const { brid } = params;
 
     const branche = await branchDetail(brid);
-    console.log(branche);
 
     return new Response(JSON.stringify(branche), {
       status: 200,

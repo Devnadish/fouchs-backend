@@ -3,10 +3,8 @@ import { faker } from "@faker-js/faker";
 import { fakerAR } from "@faker-js/faker";
 
 export const createFakBranche = async (city) => {
-  console.log(city);
   const randomIndex = Math.floor(Math.random() * city.length);
   const cityBR = city[randomIndex];
-  console.log({ cityBR });
   const branchData = {
     nameAr: fakerAR.lorem.words({ min: 3, max: 5 }),
     nameEn: faker.word.words({ count: { min: 3, max: 5 } }),

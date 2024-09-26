@@ -10,8 +10,6 @@ export const GET = async (request) => {
     );
     const { language, page, limit, branchId } = params;
 
-    console.log({ language, page, limit, branchId });
-
     const offers = await getalloffers(language, page, limit, branchId);
 
     return new Response(JSON.stringify(offers), {

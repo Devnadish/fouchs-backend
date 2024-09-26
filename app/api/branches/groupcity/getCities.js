@@ -5,6 +5,7 @@ export async function groupCitiesAndCountBranches(language) {
   const groupedData = await db.branch.groupBy({
     by: [groupByField],
     _count: { id: true },
+    _min: { cityId: true },
   });
   return { groupedData };
 }

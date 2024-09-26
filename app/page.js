@@ -52,8 +52,8 @@ export default function Home() {
           priority
         />
       </div>
-      <p>Version: 1.0.50</p>
-      <p>8/9/2024</p>
+      <p>Version: 1.1.00</p>
+      <p>26/9/2024</p>
     </main>
   );
 }
