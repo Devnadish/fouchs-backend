@@ -12,7 +12,6 @@ export const checkIsUserExist = async (mobile) => {
       return { statusCode: 301, msg: "User Does Not Exist" };
     }
   } catch (error) {
-    console.error("Error checking user existence:", error);
     return { statusCode: 500, msg: "Internal Server Error" }; // Consistent error response
   }
 };

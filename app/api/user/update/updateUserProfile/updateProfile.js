@@ -24,7 +24,7 @@ export const updateProfile = async (mobile, name, email) => {
     });
     return data;
   } catch (error) {
-    console.log(error);
+    throw error;
     return { statusCode: 500, msg: "Error updating profile image" };
   }
 };

@@ -32,6 +32,5 @@ export async function getalloffers(language, page = 1, limit = 5, branchId) {
     where: SearchField,
   });
   const totalPage = Math.ceil(totalBranches / parseInt(limit));
-  console.log(allOffers); //totalPage;
   return { allOffers, totalPage };
 }

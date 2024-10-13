@@ -15,6 +15,6 @@ export const getAllCars = async (userData) => {
 
     return cars;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

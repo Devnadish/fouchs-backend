@@ -1,3 +1,4 @@
+import { th } from "@faker-js/faker";
 import db from "../../../../lib/prisma.js";
 
 export const getUserByMobile = async (mobile) => {
@@ -11,6 +12,6 @@ export const getUserByMobile = async (mobile) => {
     });
     return data;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

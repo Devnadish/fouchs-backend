@@ -12,7 +12,6 @@ export const POST = async (request) => {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error processing request:", error);
     return new Response("Error processing request", { status: 500 });
   }
 };

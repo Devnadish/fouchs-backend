@@ -10,16 +10,15 @@ export const GET = async (request) => {
     const params = Object.fromEntries(
       new URLSearchParams(url.search).entries()
     );
-    const { brid } = params;
+    const { brid, language } = params;
 
-    const branche = await branchDetail(brid);
+    const branche = await branchDetail(brid, language);
 
     return new Response(JSON.stringify(branche), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error processing request:", error);
     return new Response("Error processing request", { status: 500 });
   }
 };

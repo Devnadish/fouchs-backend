@@ -13,14 +13,12 @@ export const GET = async (request) => {
     const { language } = params;
 
     const branches = await groupCitiesAndCountBranches(language);
-    // console.log(language, branches);
 
     return new Response(JSON.stringify(branches), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("Error processing request:", error);
     return new Response("Error processing request", { status: 500 });
   }
 };

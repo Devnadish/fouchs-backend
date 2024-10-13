@@ -27,13 +27,10 @@ export const createServices = async () => {
       await CreateInfo(Updatedata.id);
       await CreateGifts(Updatedata.id);
       await createFakeServiceRateForUser();
-      console.log(Updatedata);
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
-
-  console.log("ALL DONE ");
 };
 
 const createFakeService = async () => {

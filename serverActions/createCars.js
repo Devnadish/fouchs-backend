@@ -16,9 +16,8 @@ export const createCardata = async () => {
           logo: cars[i].logo,
         },
       });
-      console.log(Updatedata);
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
 };
@@ -32,14 +31,12 @@ export const createCarModel = async (newCarModelData) => {
 
     const addmodel = FiteredData(carEn, carId);
   }
-  console.log("ALL DONE ");
 };
 
 // Example usage:
 
 const FiteredData = async (carEn, carId) => {
   if (!carEn) return;
-  console.log({ carEn });
   const carModelArray = carmodel.filter((item) =>
     item.make.toLowerCase().includes(carEn.toLowerCase())
   );
@@ -59,8 +56,7 @@ const FiteredData = async (carEn, carId) => {
         },
       });
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
-  console.log("done", carModelArray);
 };

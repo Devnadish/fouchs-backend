@@ -34,13 +34,10 @@ export const createBranches = async () => {
           addreesEn: brData.addreesEn,
         },
       });
-      console.log(Updatedata);
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
-
-  console.log("ALL DONE ");
 };
 
 export const createBranchImages = async () => {
@@ -63,7 +60,6 @@ export const createBranchImages = async () => {
           },
         },
       });
-      console.log(Updatedata);
     }
   }
 };

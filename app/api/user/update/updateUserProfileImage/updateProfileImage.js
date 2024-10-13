@@ -29,7 +29,7 @@ export const updateProfileImage = async (mobile, avatar) => {
     });
     return data;
   } catch (error) {
-    console.log(error);
+    throw error;
     return { statusCode: 500, msg: "Error updating profile image" };
   }
 };

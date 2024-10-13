@@ -18,6 +18,6 @@ export const updateUserSetting = async (mobile, language, theme) => {
     });
     return data;
   } catch (error) {
-    console.error("Error during upsert operation:", error);
+    throw error;
   }
 };

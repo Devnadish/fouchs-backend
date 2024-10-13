@@ -1,7 +1,6 @@
 import db from "../../../../lib/prisma";
 
 export const RemoveFromFav = async (userId, branchId) => {
-  console.log(userId, branchId);
   try {
     // Find the branch like entry for the given user and branch
     const branchLikeEntry = await db.branchLikeByUser.findFirst({
@@ -13,7 +12,6 @@ export const RemoveFromFav = async (userId, branchId) => {
 
     // Check if the entry exists
     if (!branchLikeEntry) {
-      console.warn("No favorite found for this user and branch.");
       return null; // or throw an error if preferred
     }
 
@@ -24,7 +22,6 @@ export const RemoveFromFav = async (userId, branchId) => {
 
     return deletedEntry;
   } catch (error) {
-    console.error("Error during Delete Favorite operation:", error);
     throw new Error("Failed to remove favorite"); // Optionally rethrow the error
   }
 };
@@ -42,7 +39,6 @@ export const getFavorite = async (userId) => {
     });
     return branches;
   } catch (error) {
-    console.error("Error during Delete Favorite operation:", error);
     throw new Error("Failed to remove favorite"); // Optionally rethrow the error
   }
 };

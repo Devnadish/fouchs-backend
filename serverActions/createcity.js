@@ -14,7 +14,7 @@ export const createCityes = async () => {
         },
       });
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
 };

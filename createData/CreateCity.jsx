@@ -7,7 +7,6 @@ import { createCityes } from "@/serverActions/createcity";
 const CreateCity = () => {
   const createCity = async () => {
     const create = await createCityes();
-    console.log(create);
   };
 
   return (

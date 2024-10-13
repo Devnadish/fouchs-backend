@@ -30,7 +30,9 @@ export async function getBranchByCities(
   }
 
   const selectdata = getSelectData(language, userId);
-
+  const branchesCount = await db.branch.count({
+    where: SearchField,
+  });
   const allBranchesDB = await db.branch.findMany({
     where: SearchField,
     select: selectdata,
@@ -48,11 +50,14 @@ export async function getBranchByCities(
   const allBranches = allBranchesDB.map((branch) => ({
     ...branch,
     isFavorited: branch.branchLikeByUser.length > 0,
+    cityName: language === "ar" ? branch.cityAr : branch.cityEn,
+    branchName: language === "ar" ? branch.nameAr : branch.nameEn,
   }));
 
   return {
     allBranches,
     totalPage,
+    branchesCount,
   };
 }
 

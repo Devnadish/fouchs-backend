@@ -7,8 +7,6 @@ function CreateeCarsData() {
   const handleCreateCar = async () => {
     await createCardata();
     await createCarModel();
-
-    console.log("ALL DONE >>>>>>>>>>>>>>");
   };
   return (
     <button

@@ -17,13 +17,10 @@ export const creatOffers = async () => {
           detailEn: offerData.detailEn,
         },
       });
-      console.log(Updatedata);
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
-
-  console.log("ALL DONE ");
 };
 
 export const createFakoffer = async () => {

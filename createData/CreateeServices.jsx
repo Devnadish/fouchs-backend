@@ -13,11 +13,9 @@ const CreateeServices = () => {
 
     const addUserToDB = await axios
       .post(url, userData)
-      .then((response) => {
-        console.log("response", response.data);
-      })
+      .then((response) => {})
       .catch((error) => {
-        console.error({ error });
+        throw error;
       });
   };
   return (

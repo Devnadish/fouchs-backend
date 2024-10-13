@@ -27,7 +27,6 @@ export const updateCity = async (mobile, cityId, city) => {
 
     return data;
   } catch (error) {
-    console.log(error);
     return { statusCode: 500, msg: "Error updating City data" };
   }
 };

@@ -12,6 +12,6 @@ export const getCarById = async (carId) => {
     });
     return cars;
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };

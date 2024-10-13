@@ -38,6 +38,6 @@ export const UserCar = async (
     });
     return data;
   } catch (error) {
-    console.error("Error during upsert operation:", error);
+    throw error;
   }
 };
