@@ -31,8 +31,10 @@ model User {
 }
 
 model Profile {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  avatar    String   @default("")
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  avatar     String @default("")
+  avatarHash String @default("")
+
   cityId    String   @default("")
   city      String   @default("")
   dist      String   @default("")
@@ -72,6 +74,7 @@ model CarDb {
   carAr     String       @default("")
   carEn     String       @default("")
   logo      String       @default("")
+  logoHash  String       @default("")
   public_id String       @default("")
   CarModel  CarModelDb[]
   createdAt DateTime     @default(now())
@@ -90,25 +93,27 @@ model CarModelDb {
 }
 
 model Branch {
-  id               String             @id @default(auto()) @map("_id") @db.ObjectId
-  nameAr           String             @default("")
-  nameEn           String             @default("")
-  cityId           String             @default("")
-  cityAr           String             @default("")
-  cityEn           String             @default("")
-  distId           String             @default("")
-  distAr           String             @default("")
-  distEn           String             @default("")
-  lat              String             @default("")
-  long             String             @default("")
-  mobile           String             @default("")
-  addreesAr        String             @default("")
-  addreesEn        String             @default("")
-  googleRate       String             @default("")
-  usersRate        String             @default("")
-  workIngHours     String             @default("")
-  Note             String             @default("")
-  masterImage      String             @default("")
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  nameAr       String @default("")
+  nameEn       String @default("")
+  cityId       String @default("")
+  cityAr       String @default("")
+  cityEn       String @default("")
+  distId       String @default("")
+  distAr       String @default("")
+  distEn       String @default("")
+  lat          String @default("")
+  long         String @default("")
+  mobile       String @default("")
+  addreesAr    String @default("")
+  addreesEn    String @default("")
+  googleRate   String @default("")
+  usersRate    String @default("")
+  workIngHours String @default("")
+  Note         String @default("")
+  masterImage  String @default("")
+  masterHash   String @default("")
+
   image            BranchImage[]
   branchLikeByUser branchLikeByUser[]
   createdAt        DateTime           @default(now())
@@ -127,6 +132,7 @@ model branchLikeByUser {
 model BranchImage {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   image     String   @default("")
+  imageHash String   @default("")
   branch    Branch   @relation(fields: [branchId], references: [id])
   branchId  String   @db.ObjectId // relation scalar field (used in the `@relation` attribute above)
   createdAt DateTime @default(now())
@@ -134,8 +140,10 @@ model BranchImage {
 }
 
 model Offer {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  image     String   @default("")
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  image     String @default("")
+  imageHash String @default("")
+
   detailAr  String   @default("")
   detailEn  String   @default("")
   isActive  Boolean  @default(true)
@@ -144,18 +152,20 @@ model Offer {
 }
 
 model Service {
-  id            String            @id @default(auto()) @map("_id") @db.ObjectId
-  titleAr       String            @default("")
-  titleEn       String            @default("")
-  descriptionAr String            @default("")
-  descriptionEn String            @default("")
-  image         String            @default("")
-  rate          Int               @default(0)
-  info          ServiceInfo[]
-  freeGift      ServiceFreeGift[]
-  serviceRate   ServiceRate[]
-  createdAt     DateTime          @default(now())
-  updatedAt     DateTime          @updatedAt
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  titleAr       String @default("")
+  titleEn       String @default("")
+  descriptionAr String @default("")
+  descriptionEn String @default("")
+  image         String @default("")
+  imageHash     String @default("")
+
+  rate        Int               @default(0)
+  info        ServiceInfo[]
+  freeGift    ServiceFreeGift[]
+  serviceRate ServiceRate[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
 }
 
 model ServiceRate {
@@ -183,6 +193,7 @@ model ServiceInfo {
 model ServiceFreeGift {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   image     String   @default("")
+  imageHash String   @default("")
   giftAr    String   @default("")
   giftEn    String   @default("")
   service   Service  @relation(fields: [serviceId], references: [id])

@@ -14,8 +14,10 @@
     "cloudinary": "^2.4.0",
     "dotenv": "^16.4.5",
     "next": "14.2.5",
+    "plaiceholder": "^3.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",

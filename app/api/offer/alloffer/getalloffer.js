@@ -12,12 +12,14 @@ export async function getalloffers(language, page = 1, limit = 5, branchId) {
           id: true,
           detailAr: true,
           image: true,
+          imageHash: true,
           isActive: true,
         }
       : {
           id: true,
           detailEn: true,
           image: true,
+          imageHash: true,
           isActive: true,
         };
 

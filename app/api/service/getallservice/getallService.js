@@ -1,6 +1,15 @@
 import db from "../../../../lib/prisma.js";
 
 export async function getAllService(language) {
+  const allOffers = await db.offer.findMany({
+    where: { isActive: true },
+    select: {
+      id: true,
+      image: true,
+    },
+    orderBy: { updatedAt: "desc" },
+  });
+
   const allService = await db.service.findMany({
     orderBy: { updatedAt: "desc" },
     select: {
@@ -23,6 +32,6 @@ export async function getAllService(language) {
       description: language === "ar" ? descriptionAr : descriptionEn,
     })
   );
-
-  return services; // Return the mapped services
+  console.log(services, allOffers);
+  return { services, allOffers }; // Return the mapped services
 }
